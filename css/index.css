@@ -46,7 +46,7 @@ hr {
 }
 
 .hero-text {
-    margin-left: 40%;
+    margin-left: 38%;
     padding-top: 35vh;
     text-align: center;
     -webkit-animation-duration: 3s;
@@ -58,7 +58,7 @@ hr {
 }
 
 .titleHR {
-    width: 20vw;
+    width: 25vw;
     border: 2px solid #4F6D7A;
     border-radius: 10px;
     margin: auto;
