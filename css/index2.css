@@ -1,0 +1,235 @@
+.bone-gray {
+    background-color: #E5DCC5;
+}
+
+.blue-gray {
+    background-color: #848FA5;
+}
+
+.red {
+    background-color: #C14953;
+}
+
+.yellow {
+    background-color: #ffebb5;
+}
+
+.black {
+    background-color: #000000;
+}
+
+.orange {
+    background-color: #ffba00;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+hr {
+    width: 70%;
+}
+
+.hero-img {
+    background-image: url("../Images/Dubai.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    z-index: -99;
+    position: fixed;
+    width: 100%;
+}
+
+.hero-text {
+    margin-left: 40%;
+    padding-top: 35vh;
+    text-align: center;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    transition: all 0.3s;
+    position: absolute;
+}
+
+.titleHR {
+    width: 20vw;
+    border: 2px solid #4F6D7A;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.fadeInUpBig {
+    -webkit-animation-name: fadeInUpBig;
+    animation-name: fadeInUpBig;
+}
+
+.wrapper {
+    position: absolute;
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    height: 100%;
+    z-index: 5;
+    position: sticky;
+    top: 0;
+    transition: all 0.3s;
+    text-align: center;
+    margin-left: -250px;
+}
+
+.active {
+    background-color: #848FA5 !important;
+    border: none;
+}
+
+#toggleContainer {
+    height: 10%;
+    position: fixed;
+    float: left;
+    padding: 20px 0px 0px 20px;
+}
+
+#sidebar.active {
+    margin-left: 0px;
+    background-color: #E5DCC5 !important;
+}
+
+#sidebarCollapse {
+    z-index: 5;
+    border: none;
+}
+
+.sidebarBounce {
+    animation: bounce .4s infinite alternate;
+}
+
+#content {
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+.list-group {
+    font-weight: bold;
+    text-align: left;
+    padding-top: 20vh;
+}
+
+#resumeBtn,
+#githubBtn {
+    margin-top: 10vh;
+    border: 3px solid #848FA5;
+    color: black;
+    font-weight: bold;
+    transition: all .2s;
+}
+
+#resumeBtn:hover,
+#githubBtn:hover {
+    color: white;
+    background-color: #848FA5;
+}
+
+.about-section {
+    margin-top: 50%;
+    background-color: white;
+}
+
+.section-title {
+    padding-top: 5vh;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    color: #C14953;
+}
+
+.about-row {
+    margin: auto;
+    margin-top: 50px;
+    width: 50%;
+}
+
+.my-img img {
+    width: 80%;
+    border-radius: 200px;
+    border: 10px solid #fff1c7;
+}
+
+.sectionHR {
+    margin-top: 30px;
+    width: 10vw;
+    border: 1px solid #4F6D7A;
+    border-radius: 10px;
+}
+
+.work-section {
+    margin-top: 5%;
+    background-color: #ffebb5;
+}
+
+.work-row {
+    padding-top: 40px;
+    width: 60%;
+    margin: auto;
+}
+
+.work-img {
+    text-align: right;
+}
+
+.kicksome {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #77a0ba;
+}
+
+@-webkit-keyframes fadeInUpBig {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUpBig {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(10px);
+    }
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
