@@ -1,6 +1,3 @@
-// let openingImg = document.querySelector(".hero-img");
-
-// setTimeout(() => { openingImg.style.opacity = ".5"; }, 2000);
 window.onbeforeunload = function() {
     window.scrollTo(0, 0);
 }
