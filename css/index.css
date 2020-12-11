@@ -46,7 +46,7 @@ hr {
 }
 
 .hero-text {
-    padding-top: 35vh;
+    margin-top: 35vh;
     text-align: center;
     -webkit-animation-duration: 3s;
     animation-duration: 3s;
@@ -93,7 +93,7 @@ hr {
     border: none;
 }
 
-#toggleContainer {
+#toggle-container {
     height: 10%;
     position: fixed;
     float: left;
@@ -105,12 +105,16 @@ hr {
     background-color: #E5DCC5 !important;
 }
 
-#sidebarCollapse {
+#sidebar-collapse {
     z-index: 5;
     border: none;
 }
 
-.sidebarBounce {
+#sidebar-collapse:active {
+    border-color: #848FA5;
+}
+
+.sidebar-bounce {
     animation: bounce .4s infinite alternate;
 }
 
@@ -123,11 +127,10 @@ hr {
 .list-group {
     font-weight: bold;
     text-align: left;
-    padding-top: 20vh;
+    padding-top: 10vh;
 }
 
-#resumeBtn,
-#githubBtn {
+.sidebar-btn {
     margin-top: 10vh;
     border: 3px solid #848FA5;
     color: black;
@@ -135,10 +138,10 @@ hr {
     transition: all .2s;
 }
 
-#resumeBtn:hover,
-#githubBtn:hover {
+.sidebar-btn:hover {
     color: white;
     background-color: #848FA5;
+    border-color: #848FA5;
 }
 
 .about-section {
