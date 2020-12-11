@@ -46,7 +46,6 @@ hr {
 }
 
 .hero-text {
-    margin-left: 38%;
     padding-top: 35vh;
     text-align: center;
     -webkit-animation-duration: 3s;
@@ -55,6 +54,7 @@ hr {
     animation-fill-mode: both;
     transition: all 0.3s;
     position: absolute;
+    width: 100%;
 }
 
 .titleHR {
@@ -200,6 +200,10 @@ hr {
 
 .projects-section {
     background-color: #fff7e0;
+}
+
+.projects-section h6 {
+    text-align: center;
 }
 
 .projects-row {
