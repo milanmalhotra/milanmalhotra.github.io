@@ -7,16 +7,24 @@ let sidebar = document.querySelector("#sidebar");
 let discordbot = document.querySelector("#discordbot-fig");
 let figures = document.querySelectorAll("figure");
 let tabs = document.querySelectorAll(".list-group > h5");
-let home = document.querySelector(".hero-text");
-let about = document.querySelector(".about-section");
-let work = document.querySelector(".work-section");
-let projects = document.querySelector(".projects-section");
+let homeSection = document.querySelector(".hero-text");
+let aboutSection = document.querySelector(".about-section > .section-title");
+let workSection = document.querySelector(".work-section > .section-title");
+let projectsSection = document.querySelector(".projects-section > .section-title");
+let skillsSection = document.querySelector(".skills-section > .section-title");
+let homeTab = document.querySelector("#home-tab");
+let aboutTab = document.querySelector("#about-tab");
+let workTab = document.querySelector("#work-tab");
+let projectsTab = document.querySelector("#projects-tab");
+let skillsTab = document.querySelector("#skills-tab");
+let inactiveTabs = document.querySelectorAll(".list-group > .bone-gray");
 
 tabs.forEach(tab => {
     tab.addEventListener("click", function() {
         scrollToSection(tab.textContent);
     });
 });
+
 
 sidebarCollapse.addEventListener("click", function() {
     sidebarCollapse.classList.remove("sidebar-bounce");
@@ -44,13 +52,13 @@ function scrollToSection(sectionName) {
             window.scrollTo({ top: 0, behavior: "smooth" })
             break;
         case "About":
-            about.scrollIntoView({ behavior: "smooth" });
+            aboutSection.scrollIntoView({ behavior: "smooth" });
             break;
         case "Work":
-            work.scrollIntoView({ behavior: "smooth" });
+            workSection.scrollIntoView({ behavior: "smooth" });
             break;
         case "Projects":
-            projects.scrollIntoView({ behavior: "smooth" });
+            projectsSection.scrollIntoView({ behavior: "smooth" });
             break;
         case "Skills":
             break;
@@ -60,13 +68,57 @@ function scrollToSection(sectionName) {
     //sidebar.classList.toggle("active");
 };
 
-//CHECKS IF ELEMENT IS IN VIEWPORT AND RETURNS TRUE OR FALSE
-// var isInViewport = function(elem) {
-//     var bounding = elem.getBoundingClientRect();
-//     return (
-//         bounding.top >= 0 &&
-//         bounding.left >= 0 &&
-//         bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//         bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-//     );
-// };
+
+const isInViewport = function(elem) {
+    let bounding = elem.getBoundingClientRect();
+    return (
+        bounding.top >= 0 &&
+        bounding.left >= 0 &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+};
+
+window.addEventListener("scroll", function(e) {
+    inactiveTabs.forEach(tab => {
+        let corrSection = document.querySelector(tab.dataset.target);
+        if (isInViewport(corrSection)) {
+            let activeTab = document.querySelector(".list-group > .active");
+            activeTab.classList.remove("active");
+            activeTab.classList.add("bone-gray");
+            tab.classList.remove("bone-gray");
+            tab.classList.add("active");
+
+        }
+    })
+    inactiveTabs = document.querySelectorAll(".list-group > .bone-gray");
+});
+
+
+
+
+// if (isInViewport(homeSection)) {
+//     console.log("home");
+//     homeTab.classList.add("active");
+//     homeTab.classList.remove("bone-gray");
+// } else if (!isInViewport(homeSection)) {
+//     homeTab.classList.remove("active");
+//     homeTab.classList.add("bone-gray");
+// }
+// if (isInViewport(aboutSection)) {
+//     console.log("about");
+//     aboutTab.classList.add("active");
+//     aboutTab.classList.remove("bone-gray");
+// } else if (!isInViewport(aboutSection)) {
+//     aboutTab.classList.remove("active");
+//     aboutTab.classList.add("bone-gray");
+// }
+// if (isInViewport(workSection)) {
+//     console.log("project");
+//     workTab.classList.add("active");
+//     workTab.classList.remove("bone-gray");
+
+// } else if (!isInViewport(workSection)) {
+//     workTab.classList.remove("active");
+//     workTab.classList.add("bone-gray");
+// }
