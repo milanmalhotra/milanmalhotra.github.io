@@ -39,7 +39,7 @@ hr {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 101vh;
     z-index: -99;
     position: fixed;
     width: 100%;
@@ -149,7 +149,7 @@ hr {
 }
 
 .about-section {
-    margin-top: 50%;
+    margin-top: 100vh;
     background-color: #fff7e0;
     padding-bottom: 5%;
 }
