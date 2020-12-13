@@ -74,7 +74,7 @@ const isInViewport = function(elem) {
     return (
         bounding.top >= 0 &&
         bounding.left >= 0 &&
-        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.bottom <= (window.innerHeight - 300 || document.documentElement.clientHeight - 300) &&
         bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 };
