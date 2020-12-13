@@ -98,6 +98,7 @@ hr {
     position: fixed;
     float: left;
     padding: 20px 0px 0px 20px;
+    z-index: 20;
 }
 
 #sidebar.active {
@@ -125,9 +126,12 @@ hr {
 }
 
 .list-group {
-    font-weight: bold;
     text-align: left;
     padding-top: 10vh;
+}
+
+.list-group h5 {
+    font-weight: bold;
 }
 
 .sidebar-btn {
@@ -204,6 +208,7 @@ hr {
 
 .projects-section {
     background-color: #fff7e0;
+    padding-bottom: 5%;
 }
 
 .projects-section h6 {
@@ -264,6 +269,10 @@ figure:hover figcaption {
 
 figure:hover img {
     opacity: .2;
+}
+
+.skills-section {
+    background-color: #ffebb5;
 }
 
 @-webkit-keyframes fadeInUpBig {

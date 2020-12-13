@@ -15,14 +15,12 @@
         <nav id="sidebar" class="bone-gray">
 
             <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action active">
-                    Home
-                </a>
-                <a href="#" class="list-group-item list-group-item-action bone-gray">About</a>
-                <a href="#" class="list-group-item list-group-item-action bone-gray">Work</a>
-                <a href="#" class="list-group-item list-group-item-action bone-gray">Projects</a>
-                <a href="#" class="list-group-item list-group-item-action bone-gray">Skills</a>
-                <a href="#" class="list-group-item list-group-item-action bone-gray">Contact</a>
+                <h5 class="list-group-item list-group-item-action active">Home</h5>
+                <h5 class="list-group-item list-group-item-action bone-gray">About</h5>
+                <h5 class="list-group-item list-group-item-action bone-gray">Work</h5>
+                <h5 class="list-group-item list-group-item-action bone-gray">Projects</h5>
+                <h5 class="list-group-item list-group-item-action bone-gray">Skills</h5>
+                <h5 class="list-group-item list-group-item-action bone-gray">Contact</h5>
             </div>
             <a href="Resume.pdf" download="Milan Malhotra's Resume">
                 <button type="button" id="resumeBtn" class="btn btn-info bone-gray sidebar-btn">
@@ -75,7 +73,7 @@
                     </div>
                     <div class="col-sm">
                         <p>Hi, I'm Milan! I'm an aspiring Web/Application Developer located in Northern Virginia. Throughout my 4 years at Indiana University, I participated in various internships, learning skills in web development and some game and application
-                            development.
+                            development. My main skillset is with front-end services but I have worked a little with back-end.
                         </p>
                     </div>
                 </div>
@@ -173,7 +171,7 @@
                     </div>
                     <div class="w-100"></div>
                     <div class="col-4 project-img">
-                        <figure id="drugrunners-fig">
+                        <figure id="drugrunners-fig" data-toggle="modal" data-target="#drugrun-modal">
                             <img src="Images/drugrunners.PNG" alt="DrugRunners">
                             <figcaption>Kicksome LLC Game
                                 <br>
@@ -182,7 +180,7 @@
                         </figure>
                     </div>
                     <div class="col-4 project-img">
-                        <figure id="parkingassist-fig">
+                        <figure id="parkingassist-fig" data-toggle="modal" data-target="#park-modal">
                             <img src="Images/parkingassist.png" alt="Parking Assist">
                             <figcaption>Arduino Parking Assist
                                 <br>
@@ -191,7 +189,7 @@
                         </figure>
                     </div>
                     <div class="col-4 project-img">
-                        <figure id="discordbot-fig">
+                        <figure id="discordbot-fig" data-toggle="modal" data-target="#dcord-modal">
                             <img src="Images/discordbot.PNG" alt="Discord Bot">
                             <figcaption>Discord Bot
                                 <br>
@@ -201,8 +199,89 @@
                     </div>
                 </div>
             </div>
+            <div class="skills-section">
+                <div class="section-title">
+                    <h2>Skills</h2>
+                </div>
+                <hr class="sectionHR">
+            </div>
         </div>
     </div>
+
+    <!-- Modals -->
+    <div class="modal fade" id="api-modal" tabindex="-1" role="dialog" aria-labelledby="api-modal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="api-modal-title">API Practice</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="drugrun-modal" tabindex="-1" role="dialog" aria-labelledby="drugrun-modal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="drugrun-modal-title">Kicksome Entertainment LLC. Game: DrugRunners</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="park-modal" tabindex="-1" role="dialog" aria-labelledby="park-modal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="park-modal-title">Parking Assistant With Arduino</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dcord-modal" tabindex="-1" role="dialog" aria-labelledby="dcord-modal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="dcord-modal-title">Discord Bot</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 
