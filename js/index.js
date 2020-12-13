@@ -18,25 +18,50 @@ let workTab = document.querySelector("#work-tab");
 let projectsTab = document.querySelector("#projects-tab");
 let skillsTab = document.querySelector("#skills-tab");
 let inactiveTabs = document.querySelectorAll(".list-group > .bone-gray");
+const skills = {
+    html: { rate: 5 },
+    css: { rate: 5 },
+    js: { rate: 5 },
+    wordpress: { rate: 5 },
+    oop: { rate: 4 },
+    windows: { rate: 4 },
+    git: { rate: 4 },
+    mac: { rate: 4 },
+    sql: { rate: 4 },
+    jquery: { rate: 3 },
+    bootstrap: { rate: 3 },
+    cSharp: { rate: 3 },
+    python: { rate: 3 },
+    react: { rate: 2 },
+    php: { rate: 2 },
+    photoshop: { rate: 2 },
+    illustrator: { rate: 2 },
+    less: { rate: 1 },
+    jenkins: { rate: 1 },
+    jira: { rate: 1 }
+};
 
+//Add scroll to each sidebar tab
 tabs.forEach(tab => {
     tab.addEventListener("click", function() {
         scrollToSection(tab.textContent);
     });
 });
 
-
+//Remove bounce animation and toggle active class on button click
 sidebarCollapse.addEventListener("click", function() {
     sidebarCollapse.classList.remove("sidebar-bounce");
     sidebar.classList.toggle("active");
 });
 
+//Show projects when clicked
 figures.forEach(figure => {
     figure.addEventListener("click", function() {
         showProject(figure.id);
     });
 });
 
+//Open new window with project websites
 function showProject(id) {
     switch (id) {
         case "hlth360-fig":
@@ -46,6 +71,7 @@ function showProject(id) {
     };
 };
 
+//Scroll to selected section
 function scrollToSection(sectionName) {
     switch (sectionName) {
         case "Home":
@@ -68,17 +94,18 @@ function scrollToSection(sectionName) {
     //sidebar.classList.toggle("active");
 };
 
-
+//Function that checks if certain element is within the set viewport
 const isInViewport = function(elem) {
     let bounding = elem.getBoundingClientRect();
     return (
         bounding.top >= 0 &&
         bounding.left >= 0 &&
-        bounding.bottom <= (window.innerHeight - 300 || document.documentElement.clientHeight - 300) &&
+        bounding.bottom <= (window.innerHeight - 400 || document.documentElement.clientHeight - 400) &&
         bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 };
 
+//Updates the sidebar when new section is in view
 window.addEventListener("scroll", function(e) {
     inactiveTabs.forEach(tab => {
         let corrSection = document.querySelector(tab.dataset.target);
@@ -88,37 +115,7 @@ window.addEventListener("scroll", function(e) {
             activeTab.classList.add("bone-gray");
             tab.classList.remove("bone-gray");
             tab.classList.add("active");
-
         }
-    })
+    });
     inactiveTabs = document.querySelectorAll(".list-group > .bone-gray");
 });
-
-
-
-
-// if (isInViewport(homeSection)) {
-//     console.log("home");
-//     homeTab.classList.add("active");
-//     homeTab.classList.remove("bone-gray");
-// } else if (!isInViewport(homeSection)) {
-//     homeTab.classList.remove("active");
-//     homeTab.classList.add("bone-gray");
-// }
-// if (isInViewport(aboutSection)) {
-//     console.log("about");
-//     aboutTab.classList.add("active");
-//     aboutTab.classList.remove("bone-gray");
-// } else if (!isInViewport(aboutSection)) {
-//     aboutTab.classList.remove("active");
-//     aboutTab.classList.add("bone-gray");
-// }
-// if (isInViewport(workSection)) {
-//     console.log("project");
-//     workTab.classList.add("active");
-//     workTab.classList.remove("bone-gray");
-
-// } else if (!isInViewport(workSection)) {
-//     workTab.classList.remove("active");
-//     workTab.classList.add("bone-gray");
-// }

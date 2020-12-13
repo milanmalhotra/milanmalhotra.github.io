@@ -69,6 +69,10 @@ hr {
     animation-name: fadeInUpBig;
 }
 
+.fadeinUpBig2 {
+    animation: fadeInUpBig .2s ease-in;
+}
+
 .wrapper {
     position: absolute;
     display: flex;
@@ -271,8 +275,31 @@ figure:hover img {
     opacity: .2;
 }
 
+.link-icon {
+    position: absolute;
+    color: #ffba00;
+    z-index: 1;
+    top: 5%;
+    right: 5%;
+}
+
 .skills-section {
     background-color: #ffebb5;
+}
+
+.skills-row {
+    width: 80%;
+    margin: auto;
+    border: thick solid black;
+}
+
+.skill-title {
+    display: inline-block;
+    width: 60%;
+}
+
+.skill-rating {
+    float: right;
 }
 
 @-webkit-keyframes fadeInUpBig {
