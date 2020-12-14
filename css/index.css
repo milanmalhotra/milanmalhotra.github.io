@@ -288,18 +288,46 @@ figure:hover img {
 }
 
 .skills-row {
-    width: 80%;
+    width: 70%;
     margin: auto;
     border: thick solid black;
 }
 
 .skill-title {
     display: inline-block;
-    width: 60%;
+    width: 50%;
+    overflow: visible;
+}
+
+.skill-title h5 {
+    font-weight: bold;
 }
 
 .skill-rating {
     float: right;
+}
+
+.left-col {
+    padding-right: 20px;
+}
+
+.right-col {}
+
+.indiv-skill {
+    margin-top: 20px;
+}
+
+.indiv-skill i {
+    transition: .2s ease-in-out;
+    padding-right: 10px;
+}
+
+.filled {
+    color: blue;
+}
+
+.indiv-skill:hover i {
+    transform: scale(1.2);
 }
 
 @-webkit-keyframes fadeInUpBig {
