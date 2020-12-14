@@ -313,10 +313,6 @@ figure:hover img {
 
 .right-col {}
 
-.indiv-skill {
-    margin-top: 20px;
-}
-
 .indiv-skill i {
     transition: .2s ease-in-out;
     padding-right: 10px;
