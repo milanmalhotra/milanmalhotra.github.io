@@ -13,7 +13,6 @@
 <body>
     <div class="wrapper">
         <nav id="sidebar" class="bone-gray">
-
             <div class="list-group">
                 <h5 class="list-group-item list-group-item-action active" id="home-tab" data-target=".hero-text > hr">Home</h5>
                 <h5 class="list-group-item list-group-item-action bone-gray" id="about-tab" data-target=".about-section > .section-title">About</h5>
@@ -38,13 +37,13 @@
             </button>
             </a>
         </nav>
-
+        <div id="toggle-container">
+            <button type="button" id="sidebar-collapse" class="sidebar-bounce btn btn-lg btn-info blue-gray" onclick="">
+                <i class="fas fa-hand-point-left"></i>
+            </button>
+        </div>
         <div id="content">
-            <div id="toggle-container">
-                <button type="button" id="sidebar-collapse" class="sidebar-bounce btn btn-lg btn-info blue-gray" onclick="">
-                    <i class="fas fa-hand-point-left"></i>
-                </button>
-            </div>
+
             <div class="hero-text">
                 <h1 style="font-size: 4em;">Milan Malhotra</h1>
                 <hr class="titleHR">
@@ -62,17 +61,17 @@
                 </div>
                 <hr class="sectionHR">
                 <div class="row about-row">
-                    <div class="col-sm my-img">
+                    <div class="col-lg-4 col-sm-12 my-img">
                         <img src="/Images/milan.jpg" alt="Milan Malhotra">
                     </div>
-                    <div class="col-sm">
+                    <div class="col-lg-4 col-sm-12">
                         <p>
                             <strong style="color: #C14953">Location:</strong><br> Mclean, VA<br>
                             <strong style="color: #C14953">Age:</strong><br> 22<br>
                             <strong style="color: #C14953">Education:</strong><br> Bachelors of Science In Informatics from Indiana University
                         </p>
                     </div>
-                    <div class="col-sm">
+                    <div class="col-lg-4 col-sm-12">
                         <p>Hi, I'm Milan! I'm an aspiring Web/Application Developer located in Northern Virginia. Throughout my 4 years at Indiana University, I participated in various internships, learning skills in web development and some game and application
                             development. My main skillset is with front-end services but I have worked a little with back-end.
                         </p>
@@ -85,10 +84,10 @@
                 </div>
                 <hr class="sectionHR">
                 <div class="row work-row">
-                    <div class="col-6 work-img">
-                        <img src="Images/hlth360logo.png">
+                    <div class="col-lg-6 work-img col-sm-12">
+                        <img src="Images/hlth360logo.png" class="img-fluid">
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6 col-sm-12">
                         <h3>Health360 inc.</h3>
                         <h5>September 2020 - Present</h5>
                         <p>Health360 is a Health IT firm that has a focus on products and services to better the experience for patients and health providers. At my time interning at Health360, I learned skills in Web Development, design, and Application
@@ -101,7 +100,7 @@
                     <div class="col-6 work-img kicksome">
                         Kicksome Entertainment LLC.
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6 col-sm-12">
                         <h3>Kicksome Entertainment LLC.</h3>
                         <h5>May 2020 - August 2020</h5>
                         <p>Kicksome Entertainment is a small video game company that currently has one game on the market: Alien911. During the summer, my team and I started to create a drug running game using the Unity Engine. Throughout my internship,
@@ -111,10 +110,10 @@
                 </div>
                 <hr>
                 <div class="row work-row">
-                    <div class="col-6 work-img">
-                        <img src="Images/cventlogo.svg">
+                    <div class="col-lg-6 col-sm-12 work-img">
+                        <img src="Images/cventlogo.svg" class="img-fluid">
                     </div>
-                    <div class="col-6" id="cvent">
+                    <div class="col-lg-6 col-sm-12" id="cvent">
                         <h3>Cvent</h3>
                         <h5>June 2019 - August 2019</h5>
                         <p>Cvent is the leading meetings, events, and hospitality technology provider. They make booking and managing events simpler and maximize the impact of these events. When I interned at Cvent, I worked on their booking and configuration
@@ -124,10 +123,10 @@
                 </div>
                 <hr>
                 <div class="row work-row">
-                    <div class="col-6 work-img">
-                        <img src="Images/marginedgelogo.png" width="312px" height="50px">
+                    <div class="col-lg-6 col-sm-12 work-img">
+                        <img src="Images/marginedgelogo.png" class="img-fluid meLogo">
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6 col-sm-12">
                         <h3>MarginEdge</h3>
                         <h5>June 2018 - August 2018</h5>
                         <p>MarginEdge is an IT company that helps eliminate restaurant's need to have on paper their invoices, updated recipes, administartive details, and more. MarginEdge digitalizes everything and helps streamline the process, taking away
@@ -146,14 +145,14 @@
                 <br>
                 <h6><i>Code to select projects can be viewed on my Github <a href="https://github.com/milanmalhotra" target="_blank">here</a></i></h6>
                 <div class="row projects-row">
-                    <div class="col-4 project-img">
+                    <div class="col-lg-4 col-sm-12 project-img">
                         <i class="fas fa-external-link-alt fa-2x link-icon"></i>
                         <figure id="hlth360-fig">
                             <img src="Images/hlth360.PNG" alt="Health360 Inc.">
                             <figcaption>Health360 Site</figcaption>
                         </figure>
                     </div>
-                    <div class="col-4 project-img">
+                    <div class="col-lg-4 col-sm-12 project-img">
                         <figure id="apipractice-fig" data-toggle="modal" data-target="#api-modal">
                             <img src="Images/apipractice.PNG" alt="API Practice">
                             <figcaption>API Practice
@@ -162,7 +161,7 @@
                             </figcaption>
                         </figure>
                     </div>
-                    <div class="col-4 project-img">
+                    <div class="col-lg-4 col-sm-12 project-img">
                         <i class="fas fa-external-link-alt fa-2x link-icon"></i>
                         <figure id="firstunitygame-fig">
                             <img src="Images/firstunitygame.PNG" alt="First Unity Game">
@@ -173,7 +172,7 @@
                         </figure>
                     </div>
                     <div class="w-100"></div>
-                    <div class="col-4 project-img">
+                    <div class="col-lg-4 col-sm-12 project-img">
                         <figure id="drugrunners-fig" data-toggle="modal" data-target="#drugrun-modal">
                             <img src="Images/drugrunners.PNG" alt="DrugRunners">
                             <figcaption>Kicksome LLC Game
@@ -182,7 +181,7 @@
                             </figcaption>
                         </figure>
                     </div>
-                    <div class="col-4 project-img">
+                    <div class="col-lg-4 col-sm-12 project-img">
                         <figure id="parkingassist-fig" data-toggle="modal" data-target="#park-modal">
                             <img src="Images/parkingassist.png" alt="Parking Assist">
                             <figcaption>Arduino Parking Assist
@@ -191,7 +190,7 @@
                             </figcaption>
                         </figure>
                     </div>
-                    <div class="col-4 project-img">
+                    <div class="col-lg-4 col-sm-12 project-img">
                         <figure id="discordbot-fig" data-toggle="modal" data-target="#dcord-modal">
                             <img src="Images/discord.jpg" alt="Discord Bot">
                             <figcaption>Discord Bot
@@ -208,7 +207,7 @@
                 </div>
                 <hr class="sectionHR">
                 <div class="row skills-row">
-                    <div class="col-6 left-col">
+                    <div class="col-lg-6 left-col col-sm-12">
                         <div class="indiv-skill">
                             <div class="skill-title">
                                 <h5>HTML</h5>
@@ -276,7 +275,7 @@
                             <img src="Images/greenLightsaber3.png">
                         </div>
                     </div>
-                    <div class="col-6 right-col">
+                    <div class="col-lg-6 right-col col-sm-12">
                         <div class="indiv-skill">
                             <div class="skill-title">
                                 <h5>Bootstrap</h5>

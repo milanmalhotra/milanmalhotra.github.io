@@ -31,6 +31,7 @@ tabs.forEach(tab => {
 sidebarCollapse.addEventListener("click", function() {
     sidebarCollapse.classList.remove("sidebar-bounce");
     sidebar.classList.toggle("active");
+    sidebarCollapse.classList.toggle("test");
 });
 
 //Show projects when clicked
