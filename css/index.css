@@ -331,6 +331,29 @@ figure:hover img {
 
 .contact-section {
     background-color: #fff7e0;
+    height: 50vh;
+}
+
+.contact-row {
+    width: 50%;
+    margin: auto;
+}
+
+.contact-col {
+    text-align: center;
+}
+
+.contact-col i {
+    margin: 20px 30px 20px 30px;
+    transition: .3s ease-in-out;
+}
+
+.contact-col a:hover i {
+    transform: scale(1.2);
+}
+
+.contact-col a:hover {
+    text-decoration: none;
 }
 
 .modal {
@@ -389,10 +412,9 @@ figure:hover img {
     .hero-img {
         min-height: 100vh;
     }
-    .work-row {
-        width: 90%;
-    }
-    .about-row {
+    .work-row,
+    .about-row,
+    .contact-row {
         width: 90%;
     }
     .my-img {
