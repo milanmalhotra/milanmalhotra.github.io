@@ -290,12 +290,11 @@ figure:hover img {
 .skills-row {
     width: 70%;
     margin: auto;
-    border: thick solid black;
 }
 
 .skill-title {
     display: inline-block;
-    width: 50%;
+    width: 40%;
     overflow: visible;
 }
 
@@ -313,17 +312,20 @@ figure:hover img {
 
 .right-col {}
 
-.indiv-skill i {
+.indiv-skill img {
     transition: .2s ease-in-out;
-    padding-right: 10px;
 }
 
 .filled {
     color: blue;
 }
 
-.indiv-skill:hover i {
+.indiv-skill:hover img {
     transform: scale(1.2);
+}
+
+.contact-section {
+    background-color: #fff7e0;
 }
 
 @-webkit-keyframes fadeInUpBig {

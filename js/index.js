@@ -12,6 +12,7 @@ let aboutSection = document.querySelector(".about-section > .section-title");
 let workSection = document.querySelector(".work-section > .section-title");
 let projectsSection = document.querySelector(".projects-section > .section-title");
 let skillsSection = document.querySelector(".skills-section > .section-title");
+let contactSection = document.querySelector(".contact-section > .section-title");
 let homeTab = document.querySelector("#home-tab");
 let aboutTab = document.querySelector("#about-tab");
 let workTab = document.querySelector("#work-tab");
@@ -87,8 +88,10 @@ function scrollToSection(sectionName) {
             projectsSection.scrollIntoView({ behavior: "smooth" });
             break;
         case "Skills":
+            skillsSection.scrollIntoView({ behavior: "smooth" });
             break;
         case "Contact":
+            contactSection.scrollIntoView({ behavior: "smooth" });
             break;
     }
     //sidebar.classList.toggle("active");
