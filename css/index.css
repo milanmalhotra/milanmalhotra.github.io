@@ -328,6 +328,14 @@ figure:hover img {
     background-color: #fff7e0;
 }
 
+.modal {
+    overflow-y: auto;
+}
+
+.modal-open {
+    overflow: auto;
+}
+
 @-webkit-keyframes fadeInUpBig {
     0% {
         opacity: 0;

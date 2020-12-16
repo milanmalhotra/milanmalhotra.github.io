@@ -19,28 +19,6 @@ let workTab = document.querySelector("#work-tab");
 let projectsTab = document.querySelector("#projects-tab");
 let skillsTab = document.querySelector("#skills-tab");
 let inactiveTabs = document.querySelectorAll(".list-group > .bone-gray");
-const skills = {
-    html: { rate: 5 },
-    css: { rate: 5 },
-    js: { rate: 5 },
-    wordpress: { rate: 5 },
-    oop: { rate: 4 },
-    windows: { rate: 4 },
-    git: { rate: 4 },
-    mac: { rate: 4 },
-    sql: { rate: 4 },
-    jquery: { rate: 3 },
-    bootstrap: { rate: 3 },
-    cSharp: { rate: 3 },
-    python: { rate: 3 },
-    react: { rate: 2 },
-    php: { rate: 2 },
-    photoshop: { rate: 2 },
-    illustrator: { rate: 2 },
-    less: { rate: 1 },
-    jenkins: { rate: 1 },
-    jira: { rate: 1 }
-};
 
 //Add scroll to each sidebar tab
 tabs.forEach(tab => {
