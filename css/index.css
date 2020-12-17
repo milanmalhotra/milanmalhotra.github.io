@@ -364,6 +364,20 @@ figure:hover img {
     overflow: auto;
 }
 
+.modal-header {
+    background-color: #848FA5;
+}
+
+.modal-title {
+    font-weight: bold;
+    color: white;
+}
+
+.modal-footer a {
+    transition: all .2s;
+    float: left;
+}
+
 @-webkit-keyframes fadeInUpBig {
     0% {
         opacity: 0;
@@ -418,6 +432,10 @@ figure:hover img {
         width: 90%;
     }
     .my-img {
+        text-align: center;
+    }
+    .work-img {
+        margin-bottom: 40px;
         text-align: center;
     }
 }
