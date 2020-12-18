@@ -416,6 +416,15 @@ figure:hover img {
     }
 }
 
+@media (min-width: 992px) {
+    .skills-row {
+        width: 75%;
+    }
+    .skill-title {
+        width: 35%;
+    }
+}
+
 @media (max-width: 768px) {
     #sidebar {
         margin-left: -250px;
