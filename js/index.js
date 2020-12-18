@@ -104,8 +104,9 @@ window.addEventListener("scroll", function(e) {
     inactiveTabs = document.querySelectorAll(".list-group > .bone-gray");
 });
 
+//Stops video from playing when the modal or accordion is closed
 $(document).on("hidden.bs.modal", ".modal", function() {
-
+    stopVideo();
 });
 $("#accordion").on("hidden.bs.collapse", function() {
     stopVideo();
