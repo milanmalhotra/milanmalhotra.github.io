@@ -19,6 +19,8 @@ let workTab = document.querySelector("#work-tab");
 let projectsTab = document.querySelector("#projects-tab");
 let skillsTab = document.querySelector("#skills-tab");
 let inactiveTabs = document.querySelectorAll(".list-group > .bone-gray");
+let videos = document.querySelectorAll("video");
+console.log(videos);
 
 //Add scroll to each sidebar tab
 tabs.forEach(tab => {
@@ -101,3 +103,17 @@ window.addEventListener("scroll", function(e) {
     });
     inactiveTabs = document.querySelectorAll(".list-group > .bone-gray");
 });
+
+$(document).on("hidden.bs.modal", ".modal", function() {
+
+});
+$("#accordion").on("hidden.bs.collapse", function() {
+    stopVideo();
+})
+
+function stopVideo() {
+    videos.forEach(video => {
+        video.pause();
+        video.currentTime = 0;
+    });
+};
