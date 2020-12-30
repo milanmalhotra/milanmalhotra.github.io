@@ -82,9 +82,9 @@ function scrollToSection(sectionName) {
 const isInViewport = function(elem) {
     let bounding = elem.getBoundingClientRect();
     return (
-        bounding.top >= 0 &&
+        bounding.top >= 150 &&
         bounding.left >= 0 &&
-        bounding.bottom <= (window.innerHeight - 400 || document.documentElement.clientHeight - 400) &&
+        bounding.bottom <= (window.innerHeight - 200 || document.documentElement.clientHeight - 200) &&
         bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 };
