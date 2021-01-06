@@ -47,7 +47,7 @@ figures.forEach(figure => {
 function showProject(id) {
     switch (id) {
         case "hlth360-fig":
-            window.open("http://2ml.7b7.myftpupload.com/milans-landing-page-1/", "_blank");
+            window.open("http://hlth360.net", "_blank");
         case "firstunitygame-fig":
             window.open("https://milmalho.itch.io/project-breakout", "_blank");
     };
